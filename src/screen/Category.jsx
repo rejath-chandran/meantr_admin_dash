@@ -1,30 +1,44 @@
-import React from "react";
 import { getCoreRowModel, useReactTable } from "@tanstack/react-table";
+import Table from "../components/Table";
+import EditableCell from "../components/EditableCell";
+
 function Category() {
+
   const columns = [
+
     {
-      header: "Task",
-      accessorKey: "task",
-      cell: (p) => <p>{p.getValue()}</p>,
+      header: "ID",
+      accessorKey: "id",
+      cell: (p) => <p className="text-2xl mx-6">{p.getValue()}</p>,
     },
+
     {
-      header: "Name",
-      accessorKey: "name",
-      cell: (p) => <p>{p.getValue()}</p>,
-    },
-    {
-      header: "Action",
-      accessorKey: "name",
-      cell: (p) => <p>{p.getValue()}</p>,
+      header: "Category",
+      accessorKey: "category",
+      // cell: (p) => <p className="text-2xl py-2 ">{p.getValue()}</p>,
+      cell:EditableCell,
     },
   ];
 
   const data = [
     {
-      task: "123",
-      name: "rejath",
+      id: "1",
+      category: "matrimony",
+    },
+    {
+      id: "2",
+      category: "buy & sale",
+    },
+    {
+      id: "3",
+      category: "obituary",
+    },
+    {
+      id: "4",
+      category: "praise & prayers",
     },
   ];
+
   const table = useReactTable({
     columns,
     data,
@@ -32,25 +46,15 @@ function Category() {
   });
 
   return (
-    <div>
-      <table>
-        <thead>
-          <tr>
-            {table
-              .getHeaderGroups()
-              .map((i) =>
-                i.headers.map((j) => <th>{j.column.columnDef.header}</th>),
-              )}
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>rejath</td>
-          </tr>
-        </tbody>
-      </table>
+    <div className="grid grid-rows-12 overflow-y-auto h-[90vh] bg-white max-sm:w-screen max-sm:mx-2">
+      <div className="row-span-2 flex justify-end w-full max-sm:w-screen">
+        <div className="self-center bg-blue-500 px-5 py-1  rounded-md  text-white mr-3 font-thin hover:bg-blue-400">
+          Add Category
+        </div>
+      </div>
+      <Table table={table} />
     </div>
+  
   );
 }
 

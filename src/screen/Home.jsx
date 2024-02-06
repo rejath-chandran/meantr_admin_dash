@@ -507,7 +507,7 @@ function Home() {
 
                 <div className="max-sm:hidden">share news</div>
               </div>
-              <div className="col-span-2 w-[90vh]">
+              <div className="sm:col-span-4 h-[90vh] w-full ml-3">
                 <div className="w-full grid grid-rows-12 bg-white">
                   <div className="mt-8 mx-4 flex justify-start items-center">
                     <div>

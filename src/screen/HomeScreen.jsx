@@ -110,7 +110,6 @@ const chartConfig = {
 
 function HomeScreen() {
   return (
-    <div>
       <div className="h-[90vh] bg-[#F4F4F4]  max-sm:w-screen overflow-y-auto">
         <h1 className="py-8 pl-8 text-2xl text-black font-bold">Dashboard</h1>
         <div className="grid  grid-cols-1 gap-2  sm:grid-cols-12">
@@ -275,7 +274,8 @@ function HomeScreen() {
 
             <div className="max-sm:hidden">share news</div>
           </div>
-          <div className="col-span-2 w-[90vh]">
+
+          <div className="sm:col-span-4 h-[90vh] w-full">
             <div className="w-full grid grid-rows-12 bg-white">
               <div className="mt-8 mx-4 flex justify-start items-center">
                 <div>
@@ -284,15 +284,19 @@ function HomeScreen() {
                 </div>
               </div>
 
-              <div className="border-2 border-y-indigo-100 mx-6 border-x-0 h-full ">
+              <div className=" border-2 border-t-indigo-100 mx-6 border-b-0 border-x-0 h-full ">
                 //from here
               </div>
-              <div></div>
+
+              <button class="w-full row-span-1  bg-blue-white hover:bg-gray-300 text-black border-2 font-bold py-1 px-1  rounded-full">
+                All News
+              </button>
+
             </div>
+
           </div>
         </div>
       </div>
-    </div>
   );
 }
 

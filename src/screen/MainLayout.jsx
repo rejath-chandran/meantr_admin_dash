@@ -329,9 +329,12 @@ function MainLayout() {
                 </div>
 
                 <div className=" flex justify-between cursor-pointer">
-                  <div className="self-center bg-blue-500 px-6 py-1  rounded-md  text-white mr-3 font-thin hover:bg-blue-400">
+                    
+                <NavLink to={'/create'} className="self-center bg-blue-500 px-6 py-1  rounded-md  text-white mr-3 font-thin hover:bg-blue-400">
+                
                     + Create{" "}
-                  </div>
+                 
+                </NavLink>
 
                   <BiMessageDetail className="self-center h-6 w-6 mx-4 hover:bg-gray-200 rounded-md" />
                   <FaBell className="self-center h-6 w-6 mx-4" />

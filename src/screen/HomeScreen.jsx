@@ -285,7 +285,7 @@ function HomeScreen() {
               </div>
 
               <div className=" border-2 border-t-indigo-100 mx-6 border-b-0 border-x-0 h-full ">
-                //from here
+                no news found
               </div>
 
               <button class="w-full row-span-1  bg-blue-white hover:bg-gray-300 text-black border-2 font-bold py-1 px-1  rounded-full">

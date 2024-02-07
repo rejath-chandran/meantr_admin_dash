@@ -1,7 +1,7 @@
 
 import { getCoreRowModel, useReactTable } from "@tanstack/react-table";
 import Table from "../components/Table";
-
+// import moment from "moment";
 import EditableCell from "../components/EditableCell";
 function Advertisment() {
   const columns = [
@@ -12,22 +12,22 @@ function Advertisment() {
     },
     {
       header: "Date",
-      accessorKey: "name",
+      accessorKey: "date",
       cell: EditableCell,
     },
     {
       header: "Type",
-      accessorKey: "name",
+      accessorKey: "type",
       cell: EditableCell,
     },
     {
       header: "Expiry Date",
-      accessorKey: "name",
+      accessorKey: "exp",
       cell: EditableCell,
     },
     {
       header: "Ad Image",
-      accessorKey: "name",
+      accessorKey: "image",
       cell: EditableCell,
     },
     // {
@@ -40,7 +40,10 @@ function Advertisment() {
   const data = [
     {
       task: "1",
-      name: "rejath",
+      date: "7the FEB",
+      type:"banner",
+      exp:"27 FEB",
+
     },
   ];
   const table = useReactTable({
